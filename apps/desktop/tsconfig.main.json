@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist/main",
+    "module": "CommonJS",
+    "target": "ES2020",
+    "moduleResolution": "Node",
+    "jsx": "react-jsx", // 혹시 main에서 JSX 쓴다면 넣으세요, 아니면 제거
+    "esModuleInterop": true,
+    "allowJs": true,
+    "strict": true
+  },
+  "include": ["main/src/main/**/*"],
+  "exclude": ["node_modules", "dist", "build"]
+}

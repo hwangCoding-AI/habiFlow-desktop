@@ -1,0 +1,12 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+      "jsx": "react-native",
+      "baseUrl": "./",
+      "paths": {
+        "shared/*": ["../../packages/shared/src/*"]
+      }
+    },
+    "include": ["**/*.tsx", "**/*.ts"]
+  }
+  
