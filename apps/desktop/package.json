@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "concurrently -n main,renderer -c yellow,cyan \"pnpm run dev:main\" \"pnpm run dev:renderer\"",
-    "dev:renderer": "vite",
-    "dev:main": "wait-on http://localhost:5173 && electron ./dist/main.js",
+    "dev:renderer": "vite --config vite.renderer.config.ts",
+    "dev:main": "wait-on http://localhost:5173 && electron ./dist/main/main.js",
     "build": "pnpm run build:main && pnpm run build:renderer",
-    "build:main": "tsc -p src/main",
-    "build:renderer": "vite build"
+    "build:main": "pnpm tsc -p tsconfig.main.json",
+    "build:renderer": "vite build --config vite.renderer.config.ts"
   },
   "dependencies": {
     "electron": "^28.0.0",

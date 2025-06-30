@@ -10,4 +10,8 @@ export default defineConfig({
       shared: path.resolve(__dirname, "../../packages/shared/src"),
     },
   },
+  build: {
+    outDir: path.resolve(__dirname, "dist/renderer"),
+    emptyOutDir: false,
+  },
 });
