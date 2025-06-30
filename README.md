@@ -11,8 +11,7 @@
 | ------------- | ------------------------------------------ |
 | 프론트엔드    | React, Vite, Zustand, React Query          |
 | 데스크탑 앱   | Electron + Vite + React                    |
-| 모바일 앱     | React Native (예정)                        |
-| 백업드        | Java 21, Spring WebFlux, R2DBC, PostgreSQL |
+| 모바일 앱     | React Native                               |
 | AI 기능       | OpenAI GPT 기반 추천, 감정 배열 등         |
 | 모노레포 관리 | pnpm Workspaces, TurboRepo (optional)      |
 
@@ -28,7 +27,6 @@ habiFlow/
 │   └── mobile/      # 모바일 앱 (예정)
 ├── packages/
 │   └── shared/      # 공통 유틸, 타입, 후크 등
-├── backend/         # Java + Spring WebFlux 백업드 (별도 레포 가능)
 ├── docs/            # 기술 문서 및 가이드
 └── README.md        # 프로젝트 소개 문서 (본 파일)
 ```
@@ -63,7 +61,7 @@ pnpm run build
 | ------------------------ | ------------------------- |
 | `pnpm run build:desktop` | Electron 데스크탑 앱 빌드 |
 | `pnpm run build:web`     | 웹 앱 빌드                |
-| `pnpm run build:mobile`  | 모바일 앱 빌드 (예정)     |
+| `pnpm run build:mobile`  | 모바일 앱 빌드            |
 
 ---
 
@@ -79,17 +77,7 @@ pnpm run build
 
 ---
 
-## 🤝 기억 방법
-
-> 이 프로젝트는 사이드 프로젝트 기반이지만 협업을 여불하고 계획하여 개발되어 있습니다.
-
-1. 이슈 등록 및 노의
-2. 포크 → 브랜치 생성 → 기능 개발
-3. PR 요청 시 테스팅 및 리브리에워
-
----
-
 ## 📄 라이선스
 
 MIT License\
-© 2025 황형래 외 기억자들
+© 2025 황형래
