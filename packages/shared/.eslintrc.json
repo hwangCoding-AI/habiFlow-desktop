@@ -1,0 +1,12 @@
+{
+  "extends": ["../../.eslintrc.json", "plugin:@typescript-eslint/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "env": {
+    "node": true,
+    "es2021": true
+  },
+  "rules": {
+    // 공통 라이브러리 전용 룰
+  }
+}

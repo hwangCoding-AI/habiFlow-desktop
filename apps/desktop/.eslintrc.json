@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "../../.eslintrc.json",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react", "@typescript-eslint"],
+  "env": {
+    "node": true,
+    "browser": true,
+    "es2021": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {
+        "project": "./tsconfig.json"
+      }
+    }
+  },
+  "rules": {
+    // 데스크탑 전용 룰
+  }
+}

@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "composite": true,
     "outDir": "dist/main",
     "rootDir": "main/src/main",
     "module": "CommonJS",
@@ -9,7 +10,12 @@
     "jsx": "react-jsx", // 혹시 main에서 JSX 쓴다면 넣으세요, 아니면 제거
     "esModuleInterop": true,
     "allowJs": true,
-    "strict": true
+    "strict": true,
+    "baseUrl": "./main/src/main",
+    "paths": {
+      "@/*": ["./*"],
+      "@shared/*": ["../../../packages/shared/src/*"]
+    }
   },
   "include": ["main/src/main/**/*"],
   "exclude": ["node_modules", "dist", "build"]

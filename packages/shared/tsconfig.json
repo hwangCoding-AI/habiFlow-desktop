@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "composite": true, // references를 사용할 경우 필수
+    "baseUrl": "./src", // 패키지 내부에서의 경로 기준
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "jsx": "react-jsx"
+  },
+  "noEmit": true,
+  "include": ["src/**/*"]
+}

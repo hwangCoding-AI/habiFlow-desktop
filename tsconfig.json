@@ -7,14 +7,15 @@
     "lib": ["ESNext", "DOM"],
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
     "strict": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "shared/*": ["packages/shared/src/*"]
+      "@shared/*": ["packages/shared/src/*"]
     }
   },
+  "noEmit": true,
   "exclude": ["node_modules", "dist", "build"]
 }

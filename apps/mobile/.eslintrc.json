@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "../../.eslintrc.json",
+    "plugin:react-native/all",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react-native", "@typescript-eslint"],
+  "env": {
+    "es2021": true,
+    "react-native/react-native": true
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": "./tsconfig.json"
+      }
+    }
+  },
+  "rules": {
+    // 모바일 전용 룰
+  }
+}

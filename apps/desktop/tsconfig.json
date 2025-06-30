@@ -1,12 +1,7 @@
 {
-  "extends": "../../tsconfig.json",
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "baseUrl": "./main/src/renderer",
-    "paths": {
-      "shared/*": ["../../../packages/shared/src/*"]
-    }
-  },
-  "include": ["main/src/renderer/**/*"],
-  "exclude": ["node_modules", "dist", "build"]
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.renderer.json" },
+    { "path": "./tsconfig.main.json" }
+  ]
 }

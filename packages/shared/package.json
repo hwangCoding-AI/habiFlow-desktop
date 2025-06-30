@@ -8,8 +8,12 @@
     "build": "tsc --build",
     "clean": "rm -rf dist"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react": "^18.0.0",
+    "@tanstack/react-query": "^5.0.0"
+  },
   "devDependencies": {
+    "@types/react": "^18.0.0",
     "typescript": "^5.4.0"
   }
 }

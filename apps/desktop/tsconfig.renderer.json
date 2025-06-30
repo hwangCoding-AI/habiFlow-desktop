@@ -4,14 +4,18 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "shared/*": ["../../packages/shared/src/*"]
+      "@/*": ["./*"],
+      "@shared/*": ["../../packages/shared/src/*"]
     },
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Node",
     "esModuleInterop": true,
-    "strict": true
+    "strict": true,
+    "composite": true,
+    "allowJs": true
   },
-  "include": ["main/src/renderer/**/*"],
+  "noEmit": true,
+  "include": ["main/src/renderer/**/*", "../../packages/shared/src/**/*"],
   "exclude": ["node_modules", "dist", "build"]
 }

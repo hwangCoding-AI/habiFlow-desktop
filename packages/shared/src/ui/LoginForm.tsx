@@ -1,45 +1,25 @@
-import React, { useState } from "react";
-import { useMutation } from "@tanstack/react-query";
-import { login, LoginResponse } from "../api/auth";
-import { useAuthStore } from "../store/useAuthStore";
+import React from "react";
 
 interface LoginFormProps {
-  onSuccess?: () => void;
+  onSubmit: (username: string) => void;
 }
 
-export function LoginForm({ onSuccess }: LoginFormProps) {
-  const [username, setUsername] = useState("");
-  const loginStore = useAuthStore((state) => state.login);
-
-  const mutation = useMutation<LoginResponse, Error, string>({
-    mutationFn: login,
-    onSuccess: (data) => {
-      if (data.success) {
-        loginStore(username);
-        onSuccess?.();
-      } else {
-        alert(data.error || "Login failed");
-      }
-    },
-  });
-
-  const onSubmit = (e: React.FormEvent) => {
+export function LoginForm({ onSubmit }: LoginFormProps) {
+  const [username, setUsername] = React.useState("");
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    mutation.mutate(username);
+    onSubmit(username);
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={handleSubmit}>
       <input
-        placeholder="Username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
+        placeholder="Username"
         required
       />
-      <button type="submit" disabled={mutation.isPending}>
-        {mutation.isPending ? "Logging in..." : "Login"}
-      </button>
-      {mutation.isError && <p style={{ color: "red" }}>Login failed</p>}
+      <button type="submit">Login</button>
     </form>
   );
 }
